@@ -2,7 +2,6 @@ import os
 import pandas as pd
 from datetime import datetime
 
-
 def combine_csv_files(csv_folder):
     """Reads CSV files from a folder, adds a Date column, and combines them into one DataFrame."""
 
@@ -66,7 +65,7 @@ def log_status_changes(combined_df, start_date, end_date):
 
 if __name__ == "__main__":
     # Folder where CSV files are stored
-    csv_folder = "./csv_files"
+    csv_folder = "./data"
 
     # Combine CSV files and add the Date column
     combined_df = combine_csv_files(csv_folder)
@@ -76,8 +75,8 @@ if __name__ == "__main__":
     print("Combined CSV file saved as 'combined_data.csv'.")
 
     # Define the date range for logging status changes
-    start_date = '2023-01-01'
-    end_date = '2023-12-31'
+    start_date = '2025-02-25'
+    end_date = '2025-02-26'
 
     # Get the log of status changes within the specified date range
     status_changes = log_status_changes(combined_df, start_date, end_date)
